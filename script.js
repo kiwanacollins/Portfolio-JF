@@ -222,4 +222,60 @@ document.addEventListener('DOMContentLoaded', () => {
         delay: 0.8,
         ease: "back.out(1.7)"
     });
+
+    // Add this near the top of your script.js file
+    gsap.registerPlugin(ScrollTrigger);
+
+    // Add this text animation code
+    const animateText = () => {
+        const text = document.querySelector('.testimonial-title');
+        
+        // Split the text into lines
+        const lines = text.innerHTML.split('<br>');
+        text.innerHTML = '';
+        
+        // Wrap each line in a span
+        lines.forEach(line => {
+            const lineWrapper = document.createElement('span');
+            lineWrapper.className = 'line-wrapper';
+            
+            const lineContent = document.createElement('span'); 
+            lineContent.className = 'line-content';
+            lineContent.textContent = line;
+            
+            lineWrapper.appendChild(lineContent);
+            text.appendChild(lineWrapper);
+        });
+
+        // Animate each line
+        gsap.from('.line-content', {
+            y: 200,
+            opacity: 0,
+            duration: 1,
+            ease: "power4.out",
+            stagger: 0.15,
+            scrollTrigger: {
+                trigger: '.testimonial-title',
+                start: "top 80%",
+                toggleActions: "play none none reverse"
+            }
+        });
+    }
+
+    // Call the animation function
+    animateText();
+
+    // Bounce animation for testimonial title
+    gsap.from(".bounce-word", {
+        y: 20,
+        opacity: 0,
+        duration: 1,
+        stagger: 0.1,
+        ease: "bounce.out",
+        scrollTrigger: {
+            trigger: ".testimonial-title",
+            start: "top 80%",
+            toggleActions: "play none none reverse"
+        }
+    });
 });
