@@ -2010,3 +2010,63 @@ section {
     background-size: 200% 200%;
     animation: gradientFlow 15s ease infinite;
 }
+
+/* Hamburger */
+.hamburger-menu {
+    display: none;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 5px 0;
+    transition: all 0.3s ease;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+@media screen and (max-width: 768px) {
+    .hamburger-menu {
+        display: block;
+        position: fixed;
+        top: 20px;
+        right: 20px;
+    }
+    
+    .nav-links {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.9);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 999;
+    }
+    
+    .nav-links.active {
+        display: flex;
+    }
+    
+    /* Hamburger animation */
+    .bar.active:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    
+    .bar.active:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .bar.active:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+}
