@@ -156,9 +156,92 @@
         
 
         @media (max-width: 768px) {
+
+            main {
+                width: 80%;
+            }
+            .content-wrapper {
+                padding: 0 1rem;
+            }
+
+            .form-group input, .form-group select, .form-group textarea {
+                width: 90%;
+            }
+
             .contact-container {
                 grid-template-columns: 1fr;
                 gap: 2rem;
+                margin: 2rem auto;
+                padding: 1rem;
+                width: 90%;
+
+            }
+
+            #intro-text {
+                font-size: 1.2rem;
+            }
+
+            input, select, textarea {
+                font-size: 1rem;
+                width: 100%;
+            }
+
+            .contact-form {
+                margin-inline: 0 !important;
+            }
+
+            .hero-title {
+                font-size: 1.8rem;
+                text-align: center;
+            }
+
+            h2 {
+                font-size: 1.5rem !important;
+            }
+
+            .contact-method {
+                padding: 1rem;
+            }
+
+            .contact-method i {
+                font-size: 1.5rem;
+            }
+
+            .form-group input,
+            .form-group select,
+            .form-group textarea {
+                padding: 0.75rem;
+            }
+
+            .submit-btn {
+                width: 100%;
+                justify-content: center;
+                padding: 0.75rem 1.5rem;
+            }
+
+            .social-links {
+                gap: 1rem;
+            }
+
+            .social-link {
+                width: 40px;
+                height: 40px;
+                font-size: 1.2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .contact-container {
+                margin: 1rem auto;
+                padding: 1rem;
+            }
+
+            .hero-title {
+                font-size: 1.5rem;
+            }
+
+            .contact-info h2 {
+                font-size: 1.8rem !important;
             }
         }
     </style>
@@ -189,7 +272,7 @@
                     <span class="text-line">Let's Create Something</span>
                     <span class="text-line">Amazing Together</span>
                 </h1>
-                <h2 style="background: linear-gradient(to right, var(--primary-color), var(--accent-color)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">I'm always excited to connect with new people and discuss potential collaborations.</h2>
+                <h2 id="intro-text" style="background: linear-gradient(to right, var(--primary-color), var(--accent-color)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">I'm always excited to connect with new people and discuss potential collaborations.</h2>
             </section>
 
             <div class="contact-container">
@@ -229,7 +312,6 @@
                         <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
                         <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
                     </div>
-                    <hr>
                 </div>
                 
 
