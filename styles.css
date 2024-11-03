@@ -15,6 +15,10 @@
     --orange-glow: #FF8C00;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Roboto', sans-serif;
     background-color: var(--bg-color);
@@ -975,10 +979,8 @@ a, button {
     }
 }
 
-/* Add this to your existing CSS */
-html {
-    scroll-behavior: smooth;
-}
+
+
 
 /* Optional: Add a scroll margin to account for the fixed header */
 #projects {
@@ -2069,4 +2071,99 @@ section {
     .bar.active:nth-child(3) {
         transform: translateY(-8px) rotate(-45deg);
     }
+}
+
+
+/* form styles */
+
+
+
+.form-group {
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+.form-group label {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--primary-color);
+    letter-spacing: 0.5px;
+    margin-bottom: 0.5rem;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 1.2rem;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--text-color);
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 0.3px;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 20px rgba(0, 191, 166, 0.1);
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.9rem;
+}
+
+.submit-btn {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    padding: 1.2rem 2.5rem;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+    box-shadow: 0 4px 15px rgba(0, 191, 166, 0.2);
+}
+
+.submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 191, 166, 0.3);
+}
+
+.submit-btn i {
+    font-size: 1.1rem;
+    transition: transform 0.3s ease;
+}
+
+.submit-btn:hover i {
+    transform: translateX(3px);
+}
+
+/* Add required field indicator */
+.form-group label[for]::after {
+    content: attr(for);
+    position: absolute;
+    left: -9999px;
+}
+
+.form-group label[for] span::after {
+    content: "*";
+    color: var(--accent-color);
+    margin-left: 4px;
+    font-size: 1.1rem;
 }

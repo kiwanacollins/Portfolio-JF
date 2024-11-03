@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me - Niwagaba Jonathan</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+
+:root {
+            --primary-color: #00bfa6;
+            --secondary-color: #00897b;
+            --background-color: #121212;
+            --text-color: #ffffff;
+            --accent-color: #ff4081;
+        }
+
+        .content-wrapper {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            max-width: 1200px;
+            margin: 4rem auto;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+        }
+
+        .contact-info, .contact-form {
+            opacity: 0;
+            transform: translateY(50px);
+        }
+
+        .contact-info h2, .faq-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary-color);
+        }
+
+        .contact-method {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            padding: 1.5rem;
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 12px;
+            transition: all 0.3s ease;
+            margin-bottom: 1rem;
+        }
+
+        .contact-method:hover {
+            transform: translateX(10px);
+            background: rgba(255, 255, 255, 0.12);
+        }
+
+        .contact-method i {
+            font-size: 2rem;
+            color: var(--accent-color);
+        }
+
+        .form-group label {
+            font-size: 1rem;
+            font-weight: 500;
+            margin-bottom: 0.75rem;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 1rem;
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            background: rgba(255, 255, 255, 0.08);
+            color: var(--text-color);
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--accent-color);
+            box-shadow: 0 0 0 3px rgba(255, 64, 129, 0.2);
+        }
+
+        .submit-btn {
+            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            font-size: 1.1rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .social-link {
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 50%;
+            transition: all 0.3s ease;
+            font-size: 1.5rem;
+            color: var(--accent-color);
+        }
+
+        .social-link:hover {
+            transform: translateY(-5px) scale(1.1);
+            background: rgba(255, 255, 255, 0.12);
+        }
+
+        
+
+        @media (max-width: 768px) {
+            .contact-container {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+        }
+    </style>
+</head>
+<body class="dark-mode">
+    <div id="stars-container"></div>
+
+    <div class="content-wrapper">
+        <header>
+            <nav>
+                <div class="hamburger-menu">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#hero" class="active">Home</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="./contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <section id="contact-hero">
+                <h1 class="hero-title">
+                    <span class="text-line">Let's Create Something</span>
+                    <span class="text-line">Amazing Together</span>
+                </h1>
+                <p>I'm always excited to connect with new people and discuss potential collaborations.</p>
+            </section>
+
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h2>Get in Touch</h2>
+                    <p>I typically respond within 24 hours. For urgent inquiries, please use the phone number below.</p>
+
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h3>Email</h3>
+                                <p>hello@example.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-method">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h3>Phone</h3>
+                                <p>+1 (234) 567-8900</p>
+                            </div>
+                        </div>
+                        <div class="contact-method" style="display: block;">
+                             <i class="fas fa-graduation-cap"></i>
+                            <div>
+                                <h3>University</h3>
+                                <p>Isbat University</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <form class="contact-form" id="contactForm" style="margin-inline: 30px;">
+                    <div class="form-group">
+                        <label for="name"><span>Full Name</span></label>
+                        <input type="text" id="name" name="name" placeholder="Enter your full name" required aria-required="true">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email"><span>Email Address</span></label>
+                        <input type="email" id="email" name="email" placeholder="Enter your email address" required aria-required="true">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone Number (Optional)</label>
+                        <input type="tel" id="phone" name="phone" placeholder="Enter your phone number">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject"><span>Subject</span></label>
+                        <select id="subject" name="subject" required aria-required="true">
+                            <option value="">Please select a subject</option>
+                            <option value="General">General Inquiry</option>
+                            <option value="Support">Technical Support</option>
+                            <option value="Business">Business Proposal</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message"><span>Message</span></label>
+                        <textarea id="message" name="message" rows="5" placeholder="Type your message here..." required aria-required="true"></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-btn">
+                        <span class="button-content">Send Message</span>
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+
+        // Hero section animation
+        gsap.from(".hero-title .text-line", {
+            y: 100,
+            opacity: 0,
+            duration: 1,
+            stagger: 0.2,
+            ease: "power4.out"
+        });
+
+        // Contact info and form animations
+        gsap.to(".contact-info", {
+            opacity: 1,
+            x: 0,
+            duration: 1,
+            scrollTrigger: {
+                trigger: ".contact-info",
+                start: "top 80%"
+            }
+        });
+
+        gsap.to(".contact-form", {
+            opacity: 1,
+            x: 0,
+            duration: 1,
+            scrollTrigger: {
+                trigger: ".contact-form",
+                start: "top 80%"
+            }
+        });
+
+        // FAQ section animation
+        gsap.to(".faq-section", {
+            opacity: 1,
+            duration: 1,
+            scrollTrigger: {
+                trigger: ".faq-section",
+                start: "top 80%"
+            }
+        });
+
+        // Contact methods hover animation
+        document.querySelectorAll('.contact-method').forEach(method => {
+            method.addEventListener('mouseenter', () => {
+                gsap.to(method, {
+                    scale: 1.05,
+                    duration: 0.3
+                });
+            });
+
+            method.addEventListener('mouseleave', () => {
+                gsap.to(method, {
+                    scale: 1,
+                    duration: 0.3
+                });
+            });
+        });
+
+        // Form submission handler
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const subject = document.getElementById('subject').value;
+            const message = document.getElementById('message').value;
+
+            const mailtoLink = `mailto:hello@example.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\n${message}`)}`;
+            
+            window.location.href = mailtoLink;
+        });
+
+         // Additional animations
+         gsap.from(".contact-method", {
+            opacity: 0.9,
+            y: 50,
+            stagger: 0.2,
+            duration: 0.8,
+            scrollTrigger: {
+                trigger: ".contact-methods",
+                start: "top 80%"
+            }
+        });
+
+        gsap.from(".social-link", {
+            opacity: 0,
+            scale: 0.5,
+            stagger: 0.1,
+            duration: 0.6,
+            scrollTrigger: {
+                trigger: ".social-links",
+                start: "top 90%"
+            }
+        });
+
+        gsap.from(".faq-item", {
+            opacity: 0,
+            y: 30,
+            stagger: 0.2,
+            duration: 0.8,
+            scrollTrigger: {
+                trigger: ".faq-section",
+                start: "top 80%"
+            }
+        });
+
+        // FAQ interaction
+        document.querySelectorAll('.faq-item').forEach(item => {
+            const answer = item.querySelector('.faq-answer');
+            item.addEventListener('click', () => {
+                const isOpen = answer.style.display === 'block';
+                
+                gsap.to(answer, {
+                    height: isOpen ? 0 : 'auto',
+                    duration: 0.3,
+                    onComplete: () => {
+                        answer.style.display = isOpen ? 'none' : 'block';
+                    }
+                });
+            });
+        });
+    </script>
+    <script src="stars.js" defer></script>
+    <script src="script.js" defer></script>
+</body>
+</html> 
