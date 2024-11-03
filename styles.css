@@ -2054,6 +2054,7 @@ section {
         justify-content: center;
         align-items: center;
         z-index: 999;
+        font-size: x-large;
     }
     
     .nav-links.active {
