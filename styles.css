@@ -783,7 +783,7 @@ main {
   
   .ref {
     background-color: #000;
-    background-image: linear-gradient(to bottom, #d80, #c00);
+    background-image: linear-gradient(to bottom, #d80, rgb(204, 92, 0));
     border-radius: 3px;
     padding: 7px 10px;
     position: absolute;
