@@ -332,4 +332,17 @@ document.addEventListener('DOMContentLoaded', () => {
             observer.observe(container);
         });
     });
+
+    // Add this to your existing DOMContentLoaded event listener
+    gsap.from(".cta-content", {
+        y: 50,
+        opacity: 0,
+        duration: 1,
+        ease: "power3.out",
+        scrollTrigger: {
+            trigger: ".cta-section",
+            start: "top 80%",
+            toggleActions: "play none none reverse"
+        }
+    });
 });

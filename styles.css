@@ -1221,7 +1221,6 @@ nav ul li a[href="about.html"]::before {
 .profile-title h1 {
     font-size: 2.0rem;
     margin-bottom: 0.5rem;
-    background: linear-gradient(45deg, var(--primary-color), #fff);
     -webkit-text-fill-color: transparent;
 }
 
@@ -1907,4 +1906,107 @@ section {
     transform: translateY(-10px) rotateX(5deg);
     background: rgba(255, 255, 255, 0.15);
     box-shadow: 0 8px 25px rgba(88, 166, 255, 0.2);
+}
+
+/* Add these styles for the CTA section */
+.cta-section {
+    width: 80%;
+    background: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+    border-radius: 15px;
+    padding: 2.5rem 2rem;
+    margin: 2rem 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.cta-content-text {
+    flex: 1;
+}
+
+.cta-section h2 {
+    font-size: 2rem;
+    color: #1a1a1a;
+    margin-bottom: 0.75rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.cta-section p {
+    font-size: 1rem;
+    color: #2a2a2a;
+    margin-bottom: 0;
+    opacity: 0.9;
+    max-width: 500px;
+}
+
+.cta-button {
+    flex-shrink: 0;
+    display: inline-flex;
+    align-items: center;
+    background: #15192a;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    .cta-section {
+        padding: 2rem 1.5rem;
+        margin: 1.5rem 0;
+    }
+
+    .cta-content {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+
+    .cta-section h2 {
+        font-size: 1.5rem;
+    }
+
+    .cta-section p {
+        font-size: 0.9rem;
+    }
+
+    .cta-button {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+/* Optional: Add animation */
+@keyframes gradientFlow {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.cta-section {
+    background-size: 200% 200%;
+    animation: gradientFlow 15s ease infinite;
 }
