@@ -278,4 +278,58 @@ document.addEventListener('DOMContentLoaded', () => {
             toggleActions: "play none none reverse"
         }
     });
+
+    // Add this to your existing script.js
+    document.addEventListener('DOMContentLoaded', () => {
+        // Clone cards for infinite scroll
+        const skillsTrack = document.querySelector('.skills-track');
+        const cards = document.querySelectorAll('.skill-card');
+        
+        // Clone the cards and append them to create the infinite effect
+        cards.forEach(card => {
+            const clone = card.cloneNode(true);
+            skillsTrack.appendChild(clone);
+        });
+        
+        // Optional: Add intersection observer to pause animation when not in view
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach(entry => {
+                    const track = entry.target.querySelector('.skills-track');
+                    if (entry.isIntersecting) {
+                        track.style.animationPlayState = 'running';
+                    } else {
+                        track.style.animationPlayState = 'paused';
+                    }
+                });
+            },
+            { threshold: 0.5 }
+        );
+        
+        observer.observe(document.querySelector('.skills-container'));
+    });
+
+    // Update the skills animation code
+    document.addEventListener('DOMContentLoaded', () => {
+        // Optional: Add intersection observer to pause animation when not in view
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach(entry => {
+                    const tracks = entry.target.querySelectorAll('.rotating-track');
+                    tracks.forEach(track => {
+                        if (entry.isIntersecting) {
+                            track.style.animationPlayState = 'running';
+                        } else {
+                            track.style.animationPlayState = 'paused';
+                        }
+                    });
+                });
+            },
+            { threshold: 0.5 }
+        );
+        
+        document.querySelectorAll('.skill-tools-container').forEach(container => {
+            observer.observe(container);
+        });
+    });
 });

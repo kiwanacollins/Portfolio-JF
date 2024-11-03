@@ -10,6 +10,7 @@
     <script src="script.js" defer></script>
     <script src="globe.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 <body class="dark-mode">
     <div id="stars-container"></div>
@@ -133,57 +134,124 @@
      
             </section>
 
-            
-            <div class="about-sections">
-                
+            <div class="skills-container">
+                <div class="skills-track">
 
-                <div class="section-container">
-                    <div class="toolbox">
-                       
-                        <p>Latest technologies and tools I use to craft exceptional digital experiences</p>
-                        <div class="tools-grid">
-                            <div class="tool-item">
-                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/photoshop/photoshop-plain.svg" alt="Photoshop" class="tool-icon">
+                    <div class="skill-card">
+                        <h2><i class="fas fa-code"></i>Frontend</h2>
+                        <div class="skill-tools-container">
+                            <div class="skill-tools rotating-track">
+                                <span>React</span>
+                                <span>JavaScript</span>
+                                <span>React</span>
+                                <span>Vue.js</span>
+                                <span>Angular</span>
+                                <span>TypeScript</span>
+                                <span>GSAP</span>
                             </div>
-                            <div class="tool-item">
-                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP" class="tool-icon">
+                        </div>
+                    </div>
+
+                    <div class="skill-card">
+                        <h2><i class="fas fa-toolbox"></i>Database Management</h2>
+                        <div class="skill-tools-container">
+                            <div class="skill-tools rotating-track">
+                                <span>MySQL</span>
+                                <span>PostgreSQL</span>
+                                <span>MongoDB</span>
+                                <span>Firebase</span>
+                                <span>MySQL</span>
+                                <span>PostgreSQL</span>
+                                <span>Redis Cache</span>
+                                <span>MongoDB</span>
+                                <span>Firebase</span>
                             </div>
-                            <div class="tool-item">
-                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" alt="C#" class="tool-icon">
-                            </div>
-                            <div class="tool-item">
-                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js" class="tool-icon">
-                            </div>
-                            <div class="tool-item">
-                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" class="tool-icon">
-                            </div>
-                            <div class="tool-item">
-                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VS Code" class="tool-icon">
-                            </div>
-                         
-                            <div class="tool-item">
-                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB" class="tool-icon">
-                            </div>
-                            <div class="tool-item">
-                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" class="tool-icon">
-                            </div>
-                            <div class="tool-item">
-                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript" class="tool-icon">
-                            </div>
-                            <div class="tool-item">
-                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" class="tool-icon">
-                            </div>
-                            <div class="tool-item">
-                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" class="tool-icon">
-                            </div>
-                            <div class="tool-item">
-                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" class="tool-icon">
+                        </div>
+                    </div>
+                 
+                    <div class="skill-card">
+                        <h2><i class="fas fa-server"></i>Backend</h2>
+                        <div class="skill-tools-container">
+                            <div class="skill-tools rotating-track">
+                                <span>Node.js</span>
+                                <span>Python</span>
+                                <span>PHP</span>
+                                <span>Java</span>
+                                <span>Go</span>
+                                <span>Node.js</span>
+                                <span>Python</span>
+                                <span>PHP</span>
+                                <span>Java</span>
+                                <span>Go</span>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
 
+            <div class="interests-section">
+                <h2><i class="fas fa-star"></i> Beyond Coding</h2>
+                <p>Explore my interests and hobbies beyond the digital realm.</p>
+                <div class="interests-container">
+                    <div class="interest-item" data-aos="fade-up" data-aos-delay="100">
+                        <div class="interest-icon" style="display: flex; justify-content: center; align-items: center;">
+                            <i class="fas fa-plane" style="font-size: 2rem; color: #00bfa6; margin-top: 30px;"></i>
+                        </div>
+                        <div class="interest-label">
+                            <span>Traveling</span>
+                            <div class="interest-bg" style="background: linear-gradient(45deg, #00bfa6, #00897b)"></div>
+                        </div>
+                    </div>
+                    <div class="interest-item" data-aos="fade-up" data-aos-delay="200">
+                        <div class="interest-icon" style="display: flex; justify-content: center; align-items: center;">
+                            <i class="fas fa-running" style="font-size: 2rem; color: #00bfa6; margin-top: 30px;"></i>
+                        </div>
+                        <div class="interest-label">
+                            <span>Running</span>
+                            <div class="interest-bg" style="background: linear-gradient(45deg, #00bfa6, #00897b)"></div>
+                        </div>
+                    </div>
+                    <div class="interest-item" data-aos="fade-up" data-aos-delay="300">
+                        <div class="interest-icon" style="display: flex; justify-content: center; align-items: center;">
+                            <i class="fas fa-gamepad" style="font-size: 2rem; color: #00bfa6; margin-top: 30px;"></i>
+                        </div>
+                        <div class="interest-label">
+                            <span>Gaming</span>
+                            <div class="interest-bg" style="background: linear-gradient(45deg, #00bfa6, #00897b)"></div>
+                        </div>
+                    </div>
+                    <div class="interest-item" data-aos="fade-up" data-aos-delay="400">
+                        <div class="interest-icon" style="display: flex; justify-content: center; align-items: center;">
+                            <i class="fas fa-basketball-ball" style="font-size: 2rem; color: #00bfa6; margin-top: 30px;"></i>
+                        </div>
+                        <div class="interest-label">
+                            <span>Basketball</span>
+                            <div class="interest-bg" style="background: linear-gradient(45deg, #00bfa6, #00897b)"></div>
+                        </div>
+                    </div>
+                    <div class="interest-item" data-aos="fade-up" data-aos-delay="500">
+                        <div class="interest-icon" style="display: flex; justify-content: center; align-items: center;">
+                            <i class="fas fa-book" style="font-size: 2rem; color: #00bfa6; margin-top: 30px;"></i>
+                        </div>
+                        <div class="interest-label">
+                            <span>Reading</span>
+                            <div class="interest-bg" style="background: linear-gradient(45deg, #00bfa6, #00897b)"></div>
+                        </div>
+                    </div>
+                    <div class="interest-item" data-aos="fade-up" data-aos-delay="600">
+                        <div class="interest-icon" style="display: flex; justify-content: center; align-items: center;">
+                            <i class="fas fa-music" style="font-size: 2rem; color: #00bfa6; margin-top: 30px;"></i>
+                        </div>
+                        <div class="interest-label">
+                            <span>Music</span>
+                            <div class="interest-bg" style="background: linear-gradient(45deg, #00bfa6, #00897b)"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+           
+              
+                
 
             <div class="all">
                 <div class="lefter">

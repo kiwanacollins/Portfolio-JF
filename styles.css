@@ -1713,3 +1713,198 @@ section {
     display: inline-block;
     margin-right: 0.3rem;
 }
+
+/* techs */
+
+
+.card {
+    background-color: #112240;
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.card h2 {
+    font-size: 24px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.card h2 i {
+    color: #64ffda;
+}
+.card p {
+    font-size: 16px;
+    color: #8892b0;
+    margin: 10px 0 20px;
+}
+.card img {
+    width: 100%;
+    border-radius: 5px;
+}
+.toolbox {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.tool {
+    background-color: #0a192f;
+    border: 1px solid #64ffda;
+    border-radius: 5px;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #64ffda;
+    font-size: 16px;
+}
+.tool i {
+    font-size: 20px;
+}
+
+/* Add these new styles */
+.skills-container {
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    margin-right: calc(-50vw + 50%);
+    height: auto;
+    overflow: hidden;
+    position: relative;
+    padding: 4rem 0;
+    background: rgba(13, 17, 23, 0.5);
+    backdrop-filter: blur(10px);
+}
+
+.skills-track {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.skill-card {
+    flex: 0 0 auto;
+    width: 300px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 2rem;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.skill-card:hover {
+    transform: translateY(-10px);
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.skill-tools-container {
+    height: 150px;
+    overflow: hidden;
+    position: relative;
+    margin-top: 1rem;
+}
+
+.skill-tools {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    position: absolute;
+    width: 100%;
+}
+
+.rotating-track {
+    animation: rotateTrack 20s linear infinite;
+}
+
+.skill-tools span {
+    background: rgba(88, 166, 255, 0.1);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    color: var(--primary-color);
+    border: 1px solid rgba(88, 166, 255, 0.2);
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.skill-tools span:hover {
+    background: rgba(88, 166, 255, 0.2);
+    transform: scale(1.05);
+}
+
+@keyframes rotateTrack {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-50%);
+    }
+}
+
+/* Add hover pause effect */
+.skill-tools-container:hover .rotating-track {
+    animation-play-state: paused;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    .skills-track {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .skill-card {
+        width: 280px;
+        padding: 1.5rem;
+    }
+    
+    .skill-tools span {
+        font-size: 0.8rem;
+        padding: 0.4rem 0.8rem;
+    }
+}
+
+.interests-section {
+    padding: 3rem;
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02));
+    border-radius: 20px;
+    margin: 3rem 0;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.interests-section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px rgba(88, 166, 255, 0.15);
+}
+
+.interests-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+    perspective: 1000px;
+}
+
+.interest-item {
+    position: relative;
+    height: 120px;
+    border-radius: 15px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.interest-item:hover {
+    transform: translateY(-10px) rotateX(5deg);
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 8px 25px rgba(88, 166, 255, 0.2);
+}
