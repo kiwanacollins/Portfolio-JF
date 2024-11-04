@@ -2337,38 +2337,75 @@ section {
     color: #333333;
 }
 
-.light-mode .contact-list a {
+/* Update form styles for light mode */
+.light-mode .form-group input,
+.light-mode .form-group select,
+.light-mode .form-group textarea {
+    background: rgba(0, 0, 0, 0.05);
+    color: #333333;
+    border: 2px solid rgba(0, 0, 0, 0.1);
+}
+
+.light-mode .form-group input::placeholder,
+.light-mode .form-group textarea::placeholder {
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.light-mode .form-group label {
     color: #333333;
 }
 
-/* Keep the hover state visible */
-.light-mode .contact-list a:hover {
+/* Update paragraph styles for light mode */
+.light-mode p {
+    color: #333333;
+}
+
+/* Update contact method styles for light mode */
+.light-mode .contact-method {
+    background: rgba(0, 0, 0, 0.05);
+}
+
+.light-mode .contact-method:hover {
+    background: rgba(0, 0, 0, 0.08);
+}
+
+.light-mode .contact-info p,
+.light-mode .contact-method p,
+.light-mode .contact-method h3 {
+    color: #333333;
+}
+
+/* Update intro text for light mode */
+.light-mode #intro-text {
+    background: linear-gradient(to right, var(--primary-color), var(--accent-color));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: #333333;
+}
+
+/* Update social links for light mode */
+.light-mode .social-link {
+    background: rgba(0, 0, 0, 0.05);
     color: var(--primary-color);
 }
 
-/* Light mode text colors */
-.light-mode {
-    background-color: #ffffff;
+.light-mode .social-link:hover {
+    background: rgba(0, 0, 0, 0.08);
 }
 
-.light-mode .about-text p,
-.light-mode .journey-block p,
-.light-mode .passion-block p,
-.light-mode .philosophy-block p {
-    color: #333333;
+/* Update contact container background for light mode */
+.light-mode .contact-container {
+    background: rgba(0, 0, 0, 0.03);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.1);
 }
 
-.light-mode .profile-title h2,
-.light-mode .about-title,
-.light-mode .block h2 {
-    color: #333333;
+/* Update skill card h2 color for light mode */
+.light-mode .skill-card h2 {
+    color: #ffffff;
 }
 
-.light-mode .profile-role {
-    color: #333333;
-}
-
-.light-mode .skills-list li,
-.light-mode .contact-list li {
-    color: #333333;
+/* Also update the icon color to match */
+.light-mode .skill-card h2 i {
+    color: #ffffff;
 }
