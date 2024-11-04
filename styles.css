@@ -5,14 +5,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
 
 :root {
-    --bg-color: #0d1117;
-    --text-color: #ffffff;
-    --primary-color: #58a6ff;
-    --secondary-color: #30363d;
-    --accent-color: #3fb950;
+    --bg-color: #1a1a1a;
+    --text-color: #f0f0f0;
+    --primary-color: #3498db;
+    --secondary-color: #34495e;
+    --accent-color: #e74c3c;
     --star-color: #4169E1;
     --lemon-green: #CCFF00;
     --orange-glow: #FF8C00;
+}
+
+/* Light theme variables */
+.light-mode {
+    --bg-color: #ffffff;
+    --text-color: #333333;
+    --primary-color: #3498db;
+    --secondary-color: #e0e0e0;
+    --accent-color: #2ecc71;
+    --star-color: #4169E1;
+    --lemon-green: #32CD32;
+    --orange-glow: #FFA500;
 }
 
 html {
@@ -38,6 +50,9 @@ body {
     --primary-color: #3498db;
     --secondary-color: #34495e;
     --accent-color: #e74c3c;
+    --star-color: #4169E1;
+    --lemon-green: #CCFF00;
+    --orange-glow: #FF8C00;
 }
 
 header {
@@ -47,7 +62,7 @@ header {
 }
 
 nav {
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(26, 26, 26, 0.1);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     border-radius: 10px;
@@ -59,6 +74,16 @@ nav {
     z-index: 1000;
     width: 40%;
     margin: 0 auto;
+    transition: all 0.3s ease;
+}
+
+.light-mode nav {
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.dark-mode nav {
+    background: rgba(26, 26, 26, 0.8);
 }
 
 nav ul {
@@ -84,6 +109,21 @@ nav ul li a {
     transition: all 0.3s ease;
     position: relative;
     background: transparent;
+}
+
+.light-mode nav ul li a {
+    color: #333333;
+    font-weight: 500;
+}
+
+.light-mode nav ul li a:hover {
+    background: rgba(52, 152, 219, 0.2);
+    color: var(--primary-color);
+}
+
+.light-mode nav ul li a.active {
+    background: var(--primary-color);
+    color: white;
 }
 
 nav ul li a.active {
@@ -2024,9 +2064,9 @@ section {
 .bar {
     width: 25px;
     height: 3px;
-    background-color: #fff;
-    margin: 5px 0;
-    transition: all 0.3s ease;
+    background-color: var(--text-color);
+    margin: 3px 0;
+    transition: 0.4s;
 }
 
 .nav-links {
@@ -2234,15 +2274,101 @@ section {
 /* Mobile responsive adjustments */
 @media screen and (max-width: 768px) {
     .theme-toggle-container {
-        position: fixed;
-        right: 4rem;
-        top: 1.2rem;
-        transform: none;
+        position: absolute;
+        right: 2rem;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 1001;
     }
 
     .theme-toggle {
-        width: 35px;
-        height: 35px;
-        font-size: 1.2rem;
+        position: relative;
+        background: transparent;
+        border: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease;
     }
+
+    /* Theme-specific toggle colors */
+    .light-mode .theme-toggle {
+        color: #333333;
+    }
+
+    .dark-mode .theme-toggle {
+        color: #ffffff;
+    }
+}
+
+/* Add these styles for better text visibility in light mode */
+.light-mode .about-text p {
+    color: #333333; /* Dark text for light mode */
+}
+
+.light-mode #jonny {
+    color: #ffffff; /* Dark text for light mode */
+}
+
+.light-mode #jonny2 {
+    color: #2f2d2d; /* Dark text for light mode */
+}
+
+.light-mode .profile-role {
+    color: #333333;
+}
+
+.light-mode .about-title,
+.light-mode .block h2 {
+    color: #ffffff;
+}
+
+.light-mode .contact-note {
+    color: #333333;
+}
+
+.light-mode .skills-list li,
+.light-mode .contact-list li {
+    color: #333333;
+}
+
+.light-mode .contact-list a {
+    color: #333333;
+}
+
+/* Keep the hover state visible */
+.light-mode .contact-list a:hover {
+    color: var(--primary-color);
+}
+
+/* Light mode text colors */
+.light-mode {
+    background-color: #ffffff;
+}
+
+.light-mode .about-text p,
+.light-mode .journey-block p,
+.light-mode .passion-block p,
+.light-mode .philosophy-block p {
+    color: #333333;
+}
+
+.light-mode .profile-title h2,
+.light-mode .about-title,
+.light-mode .block h2 {
+    color: #333333;
+}
+
+.light-mode .profile-role {
+    color: #333333;
+}
+
+.light-mode .skills-list li,
+.light-mode .contact-list li {
+    color: #333333;
 }
