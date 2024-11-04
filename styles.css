@@ -1059,7 +1059,7 @@ a, button {
     margin-bottom: 1.5rem;
     line-height: 1.6;
     color: var(--text-color);
-    opacity: 0.9;
+    font-size: 1.2rem;
 }
 
 .skills-section, .contact-section {
