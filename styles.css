@@ -1966,7 +1966,7 @@ section {
     transition: all 0.3s ease;
     border: none;
     cursor: pointer;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 15px rgba(0, 191, 166, 0.2);
 }
 
 /* Responsive adjustments */
@@ -2170,4 +2170,79 @@ section {
     color: var(--accent-color);
     margin-left: 4px;
     font-size: 1.1rem;
+}
+
+.theme-toggle {
+    position: fixed;
+    top: 0.5rem;
+    right: -6rem;
+    background: transparent;
+    border: none;
+    color: var(--text-color);
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 1000;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.theme-toggle:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* Light mode variables */
+:root {
+    --bg-color: #ffffff;
+    --text-color: #333333;
+    --primary-color: #3498db;
+    --secondary-color: #e0e0e0;
+    --accent-color: #2ecc71;
+    --star-color: #4169E1;
+    --lemon-green: #32CD32;
+    --orange-glow: #FFA500;
+}
+
+/* Dark mode variables */
+.dark-mode {
+    --bg-color: #1a1a1a;
+    --text-color: #f0f0f0;
+    --primary-color: #3498db;
+    --secondary-color: #34495e;
+    --accent-color: #e74c3c;
+    --star-color: #4169E1;
+    --lemon-green: #CCFF00;
+    --orange-glow: #FF8C00;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    .theme-toggle {
+        top: 1rem;
+        right: 1rem;
+    }
+}
+
+
+
+
+
+/* Mobile responsive adjustments */
+@media screen and (max-width: 768px) {
+    .theme-toggle-container {
+        position: fixed;
+        right: 4rem;
+        top: 1.2rem;
+        transform: none;
+    }
+
+    .theme-toggle {
+        width: 35px;
+        height: 35px;
+        font-size: 1.2rem;
+    }
 }
