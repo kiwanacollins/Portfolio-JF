@@ -2409,3 +2409,22 @@ section {
 .light-mode .skill-card h2 i {
     color: #ffffff;
 }
+
+/* Update h2 colors for light mode */
+.light-mode .interests-section h2,
+.light-mode .testimonial-title,
+.light-mode #real-world-results h2,
+.light-mode section h2,
+.light-mode .block h2 {
+    color: #000000 !important; /* Using !important to override any conflicting styles */
+}
+
+/* Keep the icon color in interests section */
+.light-mode .interests-section h2 i {
+    color: #00bfa6;
+}
+
+/* Update section header colors for light mode */
+.light-mode .section-header {
+    color: var(--primary-color);
+}
